@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="h-screen bg-slate-100 pt-48" onload="change()">
+
+    <div class="h-3/5 w-1/5 bg-white mx-auto flex flex-col ">
+        <h1 class=" text-center py-4 text-2xl font-semibold px-12">Generador de Colores</h1>
+        <div id="color" class="h-[20vh] w-[20vh] rounded-full mx-auto bg-slate-800">
+        </div>
+        <div class="mx-auto py-2">
+            <div class="flex flex-row justify-center">
+                R:<input id="r" onchange="change()" min="0" max="255" type="range">
+            </div>
+            G:<input id="g" onchange="change()" min="0" max="255" type="range">
+            B:<input id="b" type="range" onchange="change()" min="0" max="255" class="mx-auto">
+            <div id="result"></div>
+        </div>
+        <button onclick="copy()" class="border mx-auto px-1 bg-blue-600 text-white">Copiar</button>
+        
+    </div>
+    <script src="/app.js"></script>
+</body>
+
+</html>
